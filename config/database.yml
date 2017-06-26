@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: claycribbs_development
+
+test:
+  <<: *default
+  database: claycribbs_test
+
+production:
+  <<: *default
+  database: claycribbs_production
+  username: claycribbs
+
+staging:
+  <<: *default
+  database: claycribbs_staging
+  username: claycribbs
